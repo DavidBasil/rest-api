@@ -1,7 +1,11 @@
 var express = require('express')
+var routes = require('./routes/api')
 
 // express app
 var app = express()
+
+// routes
+app.use('/api', routes)
 
 
 // listen to port
