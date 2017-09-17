@@ -1,8 +1,12 @@
 var express = require('express')
 var routes = require('./routes/api')
+var bodyParser = require('body-parser')
 
 // express app
 var app = express()
+
+// body parser
+app.use(bodyParser.json())
 
 // routes
 app.use('/api', routes)

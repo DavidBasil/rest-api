@@ -9,8 +9,11 @@ router.get('/ninjas', function(req, res){
 })
 // create a new ninja
 router.post('/ninjas', function(req, res){
+	console.log(req.body)
 	res.send({
-		type: 'POST'
+		type: 'POST',
+		name: req.body.name,
+		rank: req.body.rank
 	})
 })
 // update a ninja
